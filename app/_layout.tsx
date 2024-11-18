@@ -48,7 +48,7 @@ export default function RootLayout() {
           name="index"
           options={{
             title: "Push App",
-            headerShown: false,
+            // headerShown: false,
           }}
         />
       </Stack>
