@@ -1,8 +1,10 @@
+import { View } from "react-native";
+
 import { ThemedText } from "@/components/ThemedText";
-import { Text, View } from "react-native";
+import { usePushnotifications } from "@/hooks/usePushNotifications";
 
 export default function PushApp() {
-  const {} = usePushNotifications();
+  const { expoPushToken } = usePushnotifications();
 
   return (
     <View
@@ -12,10 +14,7 @@ export default function PushApp() {
         flex: 1,
       }}
     >
-      <ThemedText>Expo token</ThemedText>
+      <ThemedText>Token: {expoPushToken}</ThemedText>
     </View>
   );
-}
-function usePushNotifications() {
-  throw new Error("Function not implemented.");
 }
